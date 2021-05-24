@@ -26,7 +26,9 @@ titleLabel.centerX == view.centerX
 (button.top <= view.bottom + 400) | 500
 ```
 
-It's way better. But hey, it gets even better. How about view hierarchys? It's difficult to visualize the view hiearachy in regular UIKit. See the code below and try to understand the hierarchy of the view.
+It's way better, isn't it? But hey, what about view hierarchys & adding subviews? It's difficult to visualize the view hiearachy in regular UIKit. 
+
+See the code below and try to understand the hierarchy of the view.
 
 ```swift
 // Regular UIKit
