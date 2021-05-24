@@ -143,5 +143,5 @@ override func viewDidLoad() {
 
 So there ya go! Looks super easy, doesn't it?
 
-Feel free to give it a test-drive and let me know your thoughts. You can reach me out via email: neelrmewada@gmail.com
+Feel free to give it a test-drive and let me know your thoughts. You can reach out to me via email: neelrmewada@gmail.com
 
