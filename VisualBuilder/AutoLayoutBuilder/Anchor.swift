@@ -116,6 +116,12 @@ public struct VBAnchor {
         result.multiplier = rhs
         return result
     }
+    
+    public static func /(lhs: VBAnchor, rhs: CGFloat) -> VBAnchor {
+        var result = lhs
+        result.multiplier = 1 / rhs
+        return result
+    }
 }
 
 // MARK: - VBAnchorType
@@ -163,6 +169,22 @@ extension Array where Element == VBAnchor {
         var result = lhs
         for i in 0..<result.count {
             result[i].constant = -rhs
+        }
+        return result
+    }
+    
+    public static func *(lhs: [VBAnchor], rhs: CGFloat) -> [VBAnchor] {
+        var result = lhs
+        for i in 0..<result.count {
+            result[i].multiplier = rhs
+        }
+        return result
+    }
+    
+    public static func /(lhs: [VBAnchor], rhs: CGFloat) -> [VBAnchor] {
+        var result = lhs
+        for i in 0..<result.count {
+            result[i].multiplier = 1 / rhs
         }
         return result
     }
