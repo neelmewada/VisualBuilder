@@ -1,4 +1,4 @@
-# Visual Layout Builder Framework
+# Visual Builder
 
 A Swift framework that enables you to add subviews and Auto-Layout constraints in a declarative SwiftUI-like syntax.
 
