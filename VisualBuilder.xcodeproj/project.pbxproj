@@ -10,6 +10,16 @@
 		568A2246265B614300A87050 /* VisualBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568A223C265B614300A87050 /* VisualBuilder.framework */; };
 		568A224B265B614300A87050 /* VisualBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A224A265B614300A87050 /* VisualBuilderTests.swift */; };
 		568A224D265B614300A87050 /* VisualBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 568A223F265B614300A87050 /* VisualBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		568A225C265B61A200A87050 /* VisualBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A225B265B61A200A87050 /* VisualBuilder.swift */; };
+		568A225F265B620200A87050 /* ViewHierarchyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A225E265B620200A87050 /* ViewHierarchyBuilder.swift */; };
+		568A2261265B631000A87050 /* ViewControllerHierarchyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A2260265B631000A87050 /* ViewControllerHierarchyExtensions.swift */; };
+		568A2263265B63E100A87050 /* ViewHierarchyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A2262265B63E100A87050 /* ViewHierarchyExtensions.swift */; };
+		568A2266265B66F600A87050 /* AutoLayoutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A2265265B66F600A87050 /* AutoLayoutBuilder.swift */; };
+		568A2268265B683500A87050 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A2267265B683500A87050 /* Constraint.swift */; };
+		568A226A265B687000A87050 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A2269265B687000A87050 /* Anchor.swift */; };
+		568A226C265B6EA400A87050 /* ViewLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A226B265B6EA400A87050 /* ViewLayoutExtensions.swift */; };
+		568A226E265B6F8500A87050 /* ViewControllerLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A226D265B6F8500A87050 /* ViewControllerLayoutExtensions.swift */; };
+		568A2270265B7A4A00A87050 /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A226F265B7A4A00A87050 /* NSLayoutConstraintExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +39,16 @@
 		568A2245265B614300A87050 /* VisualBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisualBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		568A224A265B614300A87050 /* VisualBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualBuilderTests.swift; sourceTree = "<group>"; };
 		568A224C265B614300A87050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568A225B265B61A200A87050 /* VisualBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualBuilder.swift; sourceTree = "<group>"; };
+		568A225E265B620200A87050 /* ViewHierarchyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyBuilder.swift; sourceTree = "<group>"; };
+		568A2260265B631000A87050 /* ViewControllerHierarchyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHierarchyExtensions.swift; sourceTree = "<group>"; };
+		568A2262265B63E100A87050 /* ViewHierarchyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyExtensions.swift; sourceTree = "<group>"; };
+		568A2265265B66F600A87050 /* AutoLayoutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutBuilder.swift; sourceTree = "<group>"; };
+		568A2267265B683500A87050 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		568A2269265B687000A87050 /* Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
+		568A226B265B6EA400A87050 /* ViewLayoutExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayoutExtensions.swift; sourceTree = "<group>"; };
+		568A226D265B6F8500A87050 /* ViewControllerLayoutExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLayoutExtensions.swift; sourceTree = "<group>"; };
+		568A226F265B7A4A00A87050 /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +91,11 @@
 		568A223E265B614300A87050 /* VisualBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				568A2264265B66E300A87050 /* AutoLayoutBuilder */,
+				568A225D265B61D900A87050 /* ViewHierarchyBuilder */,
 				568A223F265B614300A87050 /* VisualBuilder.h */,
 				568A2240265B614300A87050 /* Info.plist */,
+				568A225B265B61A200A87050 /* VisualBuilder.swift */,
 			);
 			path = VisualBuilder;
 			sourceTree = "<group>";
@@ -84,6 +107,29 @@
 				568A224C265B614300A87050 /* Info.plist */,
 			);
 			path = VisualBuilderTests;
+			sourceTree = "<group>";
+		};
+		568A225D265B61D900A87050 /* ViewHierarchyBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				568A225E265B620200A87050 /* ViewHierarchyBuilder.swift */,
+				568A2260265B631000A87050 /* ViewControllerHierarchyExtensions.swift */,
+				568A2262265B63E100A87050 /* ViewHierarchyExtensions.swift */,
+			);
+			path = ViewHierarchyBuilder;
+			sourceTree = "<group>";
+		};
+		568A2264265B66E300A87050 /* AutoLayoutBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				568A2265265B66F600A87050 /* AutoLayoutBuilder.swift */,
+				568A2267265B683500A87050 /* Constraint.swift */,
+				568A2269265B687000A87050 /* Anchor.swift */,
+				568A226B265B6EA400A87050 /* ViewLayoutExtensions.swift */,
+				568A226D265B6F8500A87050 /* ViewControllerLayoutExtensions.swift */,
+				568A226F265B7A4A00A87050 /* NSLayoutConstraintExtensions.swift */,
+			);
+			path = AutoLayoutBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +193,7 @@
 				TargetAttributes = {
 					568A223B265B614300A87050 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					568A2244265B614300A87050 = {
 						CreatedOnToolsVersion = 12.5;
@@ -194,6 +241,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568A2268265B683500A87050 /* Constraint.swift in Sources */,
+				568A226A265B687000A87050 /* Anchor.swift in Sources */,
+				568A226C265B6EA400A87050 /* ViewLayoutExtensions.swift in Sources */,
+				568A225C265B61A200A87050 /* VisualBuilder.swift in Sources */,
+				568A2266265B66F600A87050 /* AutoLayoutBuilder.swift in Sources */,
+				568A2261265B631000A87050 /* ViewControllerHierarchyExtensions.swift in Sources */,
+				568A2263265B63E100A87050 /* ViewHierarchyExtensions.swift in Sources */,
+				568A2270265B7A4A00A87050 /* NSLayoutConstraintExtensions.swift in Sources */,
+				568A226E265B6F8500A87050 /* ViewControllerLayoutExtensions.swift in Sources */,
+				568A225F265B620200A87050 /* ViewHierarchyBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +398,7 @@
 		568A2251265B614300A87050 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6U5D4S4U6V;
@@ -349,6 +407,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = VisualBuilder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +416,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.neelmewada.VisualBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +426,7 @@
 		568A2252265B614300A87050 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6U5D4S4U6V;
@@ -373,6 +435,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = VisualBuilder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +444,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.neelmewada.VisualBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -389,6 +453,7 @@
 		568A2254265B614300A87050 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6U5D4S4U6V;
 				INFOPLIST_FILE = VisualBuilderTests/Info.plist;
@@ -407,6 +472,7 @@
 		568A2255265B614300A87050 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6U5D4S4U6V;
 				INFOPLIST_FILE = VisualBuilderTests/Info.plist;
