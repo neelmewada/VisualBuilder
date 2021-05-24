@@ -1,6 +1,6 @@
 # Visual Builder
 
-A Swift framework made for **UIKit** that enables you to add Auto-Layout **constraints** and **subviews** in a declarative SwiftUI like syntax. And that too without any strings!
+A lightweight Swift framework made for **UIKit** that enables you to add Auto-Layout **constraints** and **subviews** in a declarative SwiftUI like syntax. And that too without any strings!
 
 Here's how adding constraints look in regular UIKit:
 
