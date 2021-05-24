@@ -44,6 +44,7 @@ extension Array: VBConstraintGroup where Element == VBConstraint {
 
 // MARK: - VBLayoutBuilder protocol
 
+/// Protocol implemented by UIViewController and UIView subclasses to enable Constraint Builder.
 public protocol VBLayoutBuilder: NSObject {
     var currentConstraints: [NSLayoutConstraint] { get set }
     var constraintBuilder: [VBConstraint] { get }

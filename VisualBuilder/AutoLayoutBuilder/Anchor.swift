@@ -131,3 +131,39 @@ public enum VBAnchorType: String {
     case centerY
     case constant
 }
+
+// MARK: - [VBAnchor] Extension
+
+extension Array where Element == VBAnchor {
+    
+    public static func ==(lhs: [VBAnchor], rhs: [VBAnchor]) -> [VBConstraint] {
+        if lhs.count != rhs.count {
+            return []
+        }
+        var constraints = [VBConstraint]()
+        let count = lhs.count
+        
+        for i in 0..<count {
+            constraints.append(VBConstraint(lhs: lhs[i], rhs: rhs[i]))
+        }
+        
+        return constraints
+    }
+    
+    
+    public static func +(lhs: [VBAnchor], rhs: CGFloat) -> [VBAnchor] {
+        var result = lhs
+        for i in 0..<result.count {
+            result[i].constant = rhs
+        }
+        return result
+    }
+    
+    public static func -(lhs: [VBAnchor], rhs: CGFloat) -> [VBAnchor] {
+        var result = lhs
+        for i in 0..<result.count {
+            result[i].constant = -rhs
+        }
+        return result
+    }
+}
