@@ -40,7 +40,7 @@ child4.addSubview(child5)
 child4.addSubview(child6)
 ```
 
-And how let's see how it is with Visual Builder:
+And now let's see how it is with Visual Builder:
 
 ```swift
 // Visual Builder
