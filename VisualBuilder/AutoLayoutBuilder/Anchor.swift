@@ -2,7 +2,6 @@
 //  Anchor.swift
 //  VisualBuilder
 //
-//  Created by Neel Mewada on 24/05/21.
 //
 
 import UIKit
@@ -21,6 +20,11 @@ public struct VBAnchor {
     var multiplier: CGFloat = 1
     
     // MARK: - Helpers
+    
+    /// True if it is rightAnchor, or bottomAnchor. i.e. the constant should be negative to apply an inset.
+    public var isNegativeAnchor: Bool {
+        return type == .right || type == .bottom
+    }
     
     public var isXAxisAnchor: Bool {
         return type == .left || type == .right || type == .centerX
@@ -156,11 +160,10 @@ extension Array where Element == VBAnchor {
         return constraints
     }
     
-    
     public static func +(lhs: [VBAnchor], rhs: CGFloat) -> [VBAnchor] {
         var result = lhs
         for i in 0..<result.count {
-            result[i].constant = rhs
+            result[i].constant = rhs * (result[i].isNegativeAnchor ? 1 : -1) // We need "expansion" effect here.
         }
         return result
     }
@@ -168,7 +171,7 @@ extension Array where Element == VBAnchor {
     public static func -(lhs: [VBAnchor], rhs: CGFloat) -> [VBAnchor] {
         var result = lhs
         for i in 0..<result.count {
-            result[i].constant = -rhs
+            result[i].constant = rhs * (result[i].isNegativeAnchor ? -1 : 1) // We need "contraction" effect here.
         }
         return result
     }

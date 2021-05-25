@@ -2,12 +2,11 @@
 //  VBConstraint.swift
 //  VisualBuilder
 //
-//  Created by Neel Mewada on 24/05/21.
 //
 
 import UIKit
 
-//infix operator |
+typealias VBConstraintAnimation = () -> ()
 
 public struct VBConstraint {
     var lhs: VBAnchor
@@ -26,4 +25,15 @@ public enum VBConstraintRelation {
     case equal
     case greaterThanOrEqualTo
     case lessThanOrEqualTo
+    
+    func getRelation() -> NSLayoutConstraint.Relation {
+        switch self {
+        case .equal:
+            return .equal
+        case .greaterThanOrEqualTo:
+            return .greaterThanOrEqual
+        case .lessThanOrEqualTo:
+            return .lessThanOrEqual
+        }
+    }
 }

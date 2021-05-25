@@ -2,7 +2,6 @@
 //  ViewControllerExtensions.swift
 //  VisualBuilder
 //
-//  Created by Neel Mewada on 24/05/21.
 //
 
 import UIKit
@@ -14,17 +13,36 @@ extension VBLayoutBuilder where Self: UIViewController {
     public func buildConstraints() {
         clearConstraints()
         
+        var constraints = [NSLayoutConstraint]()
+        
         for constraint in constraintBuilder {
-            currentConstraints.append(contentsOf: createConstraint(constraint))
+            var constraintsToRemove = [NSLayoutConstraint]()
+            
+            // Check if this constraint is already active
+            for currentlyActiveConstraint in currentConstraints {
+                if currentlyActiveConstraint.isEqual(to: constraint) { // if it is present, no need to re-add it
+                    continue
+                } else { // else remove the currently active constraint
+                    constraintsToRemove.append(currentlyActiveConstraint)
+                }
+            }
+            
+            NSLayoutConstraint.deactivate(constraintsToRemove)
+            currentConstraints.removeAll { x in
+                return constraintsToRemove.contains(x)
+            }
+            
+            constraints.append(contentsOf: createConstraints(constraint))
         }
         
+        currentConstraints.append(contentsOf: constraints)
         NSLayoutConstraint.activate(currentConstraints)
         
         view.setNeedsLayout()
         view.layoutIfNeeded()
     }
     
-    private func createConstraint(_ constraint: VBConstraint) -> [NSLayoutConstraint] {
+    private func createConstraints(_ constraint: VBConstraint) -> [NSLayoutConstraint] {
         guard let _ = constraint.lhs.view else { return [] }
         
         var constraints = [NSLayoutConstraint]()
@@ -81,6 +99,6 @@ extension VBLayoutBuilder where Self: UIViewController {
     
     public func clearConstraints() {
         NSLayoutConstraint.deactivate(currentConstraints)
-        currentConstraints.removeAll()
+        //currentConstraints.removeAll()
     }
 }

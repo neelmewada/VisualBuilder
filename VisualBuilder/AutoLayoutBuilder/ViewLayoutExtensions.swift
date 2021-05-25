@@ -2,7 +2,6 @@
 //  ViewExtensions.swift
 //  VisualBuilder
 //
-//  Created by Neel Mewada on 24/05/21.
 //
 
 import UIKit
@@ -83,7 +82,7 @@ extension VBLayoutBuilder where Self: UIView {
         clearConstraints()
         
         for constraint in constraintBuilder {
-            currentConstraints.append(contentsOf: createConstraint(constraint))
+            currentConstraints.append(contentsOf: createConstraints(constraint))
         }
         
         NSLayoutConstraint.activate(currentConstraints)
@@ -92,7 +91,7 @@ extension VBLayoutBuilder where Self: UIView {
         self.layoutIfNeeded()
     }
     
-    private func createConstraint(_ constraint: VBConstraint) -> [NSLayoutConstraint] {
+    private func createConstraints(_ constraint: VBConstraint) -> [NSLayoutConstraint] {
         guard let _ = constraint.lhs.view else { return [] }
         
         var constraints = [NSLayoutConstraint]()

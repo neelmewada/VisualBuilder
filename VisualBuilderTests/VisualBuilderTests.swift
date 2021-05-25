@@ -2,7 +2,6 @@
 //  VisualBuilderTests.swift
 //  VisualBuilderTests
 //
-//  Created by Neel Mewada on 24/05/21.
 //
 
 import XCTest

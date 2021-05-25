@@ -93,9 +93,9 @@
 			children = (
 				568A2264265B66E300A87050 /* AutoLayoutBuilder */,
 				568A225D265B61D900A87050 /* ViewHierarchyBuilder */,
+				568A225B265B61A200A87050 /* VisualBuilder.swift */,
 				568A223F265B614300A87050 /* VisualBuilder.h */,
 				568A2240265B614300A87050 /* Info.plist */,
-				568A225B265B61A200A87050 /* VisualBuilder.swift */,
 			);
 			path = VisualBuilder;
 			sourceTree = "<group>";
