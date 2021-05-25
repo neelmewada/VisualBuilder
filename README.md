@@ -143,5 +143,16 @@ override func viewDidLoad() {
 
 So there ya go! Looks super easy, doesn't it?
 
+# Features
+
+- SwiftUI like declarative syntax.
+- Supports conditional constraints.
+- Animating your constraints is stupid-simple as shown: (use alongside conditional constraints)
+```swift
+UIView.animate(withDuration: 0.25) {
+  self.buildConstraints()
+}
+```
+
 Feel free to give it a test-drive and let me know your thoughts. You can reach out to me via email: neelrmewada@gmail.com
 
