@@ -58,7 +58,7 @@ Much better, right? It handles adding subviews for you. Feel free to check out t
 
 ## Installation
 
-Coming soon via a CocoaPod.
+Coming soon via CocoaPods. Till then, you can directly add this repo as a module in a Xcode workspace.
 
 # Usage
 
