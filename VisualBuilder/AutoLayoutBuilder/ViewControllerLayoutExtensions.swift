@@ -20,12 +20,10 @@ extension VBLayoutBuilder where Self: UIViewController {
             
             // Check if this constraint is already active
             for currentlyActiveConstraint in currentConstraints {
-                if currentlyActiveConstraint.isEqual(to: constraint) { // if it is present, no need to re-add it
-                    continue
-                } else { // else remove the currently active constraint
-                    constraintsToRemove.append(currentlyActiveConstraint)
-                }
+                constraintsToRemove.append(currentlyActiveConstraint)
             }
+            
+            print("Removing constraints:\(constraintsToRemove.count)\n\(constraintsToRemove)")
             
             NSLayoutConstraint.deactivate(constraintsToRemove)
             currentConstraints.removeAll { x in
@@ -38,8 +36,7 @@ extension VBLayoutBuilder where Self: UIViewController {
         currentConstraints.append(contentsOf: constraints)
         NSLayoutConstraint.activate(currentConstraints)
         
-        view.setNeedsLayout()
-        view.layoutIfNeeded()
+        print("ViewConstraints: \(view.constraints)")
     }
     
     private func createConstraints(_ constraint: VBConstraint) -> [NSLayoutConstraint] {

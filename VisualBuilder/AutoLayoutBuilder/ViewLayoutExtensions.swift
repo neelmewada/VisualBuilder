@@ -24,6 +24,10 @@ extension UIView {
         [width, height]
     }
     
+    public var center: [VBAnchor] {
+        [centerX, centerY]
+    }
+    
     public var left: VBAnchor {
         VBAnchor(view: self, type: .left)
     }
