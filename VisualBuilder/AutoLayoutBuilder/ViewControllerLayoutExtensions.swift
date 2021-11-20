@@ -23,8 +23,6 @@ extension VBLayoutBuilder where Self: UIViewController {
                 constraintsToRemove.append(currentlyActiveConstraint)
             }
             
-            print("Removing constraints:\(constraintsToRemove.count)\n\(constraintsToRemove)")
-            
             NSLayoutConstraint.deactivate(constraintsToRemove)
             currentConstraints.removeAll { x in
                 return constraintsToRemove.contains(x)
@@ -35,8 +33,6 @@ extension VBLayoutBuilder where Self: UIViewController {
         
         currentConstraints.append(contentsOf: constraints)
         NSLayoutConstraint.activate(currentConstraints)
-        
-        print("ViewConstraints: \(view.constraints)")
     }
     
     private func createConstraints(_ constraint: VBConstraint) -> [NSLayoutConstraint] {

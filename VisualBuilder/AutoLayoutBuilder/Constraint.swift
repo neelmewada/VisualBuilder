@@ -21,6 +21,7 @@ public struct VBConstraint {
     }
 }
 
+
 public enum VBConstraintRelation {
     case equal
     case greaterThanOrEqualTo
