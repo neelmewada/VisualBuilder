@@ -62,10 +62,6 @@ child2.content {
 
 Much better, right? It handles adding subviews for you. Feel free to check out the Usage & features below and give it a try.
 
-## Installation
-
-Coming soon via CocoaPods. Till then, you can directly add this repo as a module in a Xcode workspace.
-
 # Usage
 
 Visual Builder can be implemented in both ```UIViewController``` and ```UIView``` subclasses. Here's a step-by-step example of a view controller implementation.
