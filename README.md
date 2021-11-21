@@ -2,6 +2,12 @@
 
 A lightweight Swift framework made for **UIKit** that enables you to add Auto-Layout **constraints** and **subviews** in a declarative SwiftUI like syntax. And that too without any strings!
 
+### Features
+
+- SwiftUI-like declarative syntax for auto-layout constraints
+- Supports Conditional constraints.
+- Supports Animated constraints.
+
 Here's how adding constraints look in regular UIKit:
 
 ```swift
